@@ -12,7 +12,7 @@ var GPIO_refresh = 1;
 //imagemapster settings
 var resizeDelay = 0,
     resizeTime = 0,
-    resizeWidth = 8 / 12;
+    resizeWidth = 7 / 12;
 
 
 $(document).ready(function() {
@@ -83,10 +83,10 @@ $(document).ready(function() {
         var lsid = 'lightswitch_' + $(this).attr('gpio');
         $(this).html(
             '<div class="row">' +
-            '    <div class="small-4 column">' +
+            '    <div class="span1">' +
             '        <div class="switchlabel">' + label + '</div>' +
             '    </div>' +
-            '    <div class="small-4 columns">' +
+            '    <div class="pull-right">' +
             '            <div class="onoffswitch">' +
             '                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="' + lsid + '" >' +
             '                <label class="onoffswitch-label" for="' + lsid + '">' +
