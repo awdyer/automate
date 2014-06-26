@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WebIOPi | Light Control</title>
+
+        <!-- <script type="text/javascript" src="/webiopi.js"></script> -->
+        <!-- <script type="text/javascript" src="/jquery.js"></script> -->
+
+        <link rel="stylesheet" href="css/foundation.css" />
+        <script type="text/javascript" src="js/modernizr.js"></script>
+
+        <link rel="stylesheet" href="css/flipswitch.css" />
+
+       
+        
+        
+        <link rel="stylesheet" type="text/css" href="css/working1.css" />
+</head>
+<body>
+REST
+
+        <div class="row">
+            <div class="small-8 columns small-centered">
+                <!-- <h2 class="text-center">Areas</h2>
+                <div class="hline"></div> -->
+                <p class="text-center">
+                    <a href="#" class="area_button">Bedroom</a>
+                    <a href="#" class="area_button">Living</a>
+                    <a href="#" class="area_button">Outdoors</a>
+                    <!-- <a href="/app/gpio-header" class="right">Admin</a> -->
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+
+            <div class="area">
+                <div class="small-7 columns">
+                        <div class="row">
+                            <img src="img/area_bedroom.jpg" width="560" height="425" border="0" alt="" class="imgmap" usemap="#map_bedroom">
+                            <map name="map_bedroom">
+                            <area shape="circle" alt="" coords="130,29,19"  href="#" class="light" gpio="27">
+                            <area shape="circle" alt="" coords="295,211,19" href="#" class="light" gpio="7">
+                            <area shape="circle" alt="" coords="505,78,19"  href="#" class="light" gpio="8">
+                            </map>
+                        </div>
+                </div>
+                <div class="small-3 columns lightboard">
+                    <div class="light_switch" gpio="27">Bedside</div>
+                    <div class="light_switch" gpio="7">Overhead</div>
+                    <div class="light_switch" gpio="8">Desk</div>
+                </div>
+            </div>
+
+            <div class="area">
+                <div class="small-7 columns">
+                    <div class="row">
+                        <img src="img/area_living.jpg" width="560" height="425" border="0" alt="" class="imgmap" usemap="#map_living">
+                        <map name="map_living">
+                        <area shape="circle" alt="" coords="244,28,16"  href="#" class="light" gpio="22">
+                        <area shape="circle" alt="" coords="515,72,16"  href="#" class="light" gpio="23">
+                        <area shape="circle" alt="" coords="513,206,16" href="#" class="light" gpio="24">
+                        <area shape="circle" alt="" coords="457,274,16" href="#" class="light" gpio="25">
+                        </map>
+                    </div>
+                </div>
+                <div class="small-3 columns lightboard">         
+                    <div class="light_switch" gpio="22">Living 1</div>
+                    <div class="light_switch" gpio="23">Living 2</div>
+                    <div class="light_switch" gpio="24">Living 3</div>
+                    <div class="light_switch" gpio="25">Living 4</div>
+                </div>
+            </div>
+
+            <div class="area">
+                <div class="small-7 columns">
+                    <div class="row">
+                        <img src="img/area_outdoors.jpg" width="560" height="425" border="0" alt="" class="imgmap" usemap="#map_outdoors">
+                        <map name="map_outdoors">
+                        <area shape="circle" alt="" coords="158,84,16" href="#" class="light" gpio="9">
+                        <area shape="circle" alt="" coords="222,282,16" href="#" class="light" gpio="10">
+                        <area shape="circle" alt="" coords="136,290,16" href="#" class="light" gpio="11">
+                        <area shape="circle" alt="" coords="390,287,16" href="#" class="light" gpio="17">
+                        </map>
+                    </div>
+                </div>
+                <div class="small-3 columns lightboard">
+                    <div class="light_switch" gpio="9">Pool</div>
+                    <div class="light_switch" gpio="10">Tables 1</div>
+                    <div class="light_switch" gpio="11">Tables 2</div>
+                    <div class="light_switch" gpio="17">Deck</div>
+                </div>      
+            </div>
+
+        </div>
+
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.imagemapster.js"></script>
+<script type="text/javascript" src="js/rest.js"></script>
+
+</body>
+</html>

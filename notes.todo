@@ -1,0 +1,9 @@
+Interface:
+  ☐ Metro UI
+  ☐ Weather feed
+  ☐ Link to /app/gpio-header
+
+System:
+  ✔ Change interface to use REST API instead of javascript @done (14-05-02 02:30)
+  ✔ Clean the automate/html folder @done (14-05-02 02:30)
+  ✔ Add periodic update of light state @done (14-05-02 13:28)
