@@ -68,9 +68,9 @@
       <div class="row">
          <div class="span12">
             <div id="header-container">
-               <a id="backbutton" class="win-backbutton" href="./hub.html"></a>
-               <h5>Automate</h5>
-               <div class="dropdown">
+               <!-- <a id="backbutton" class="win-backbutton" href="./hub.html"></a> -->
+               <h1 id="pageTitle">Home</h1>
+               <!-- <div class="dropdown">
                   <a class="header-dropdown dropdown-toggle accent-color" data-toggle="dropdown" href="#" >
                      Rooms
                      <b class="caret"></b>
@@ -95,14 +95,23 @@
                   <li class="divider"></li>
                   <li><a href="./index.html">Home</a></li>
                </ul>
+            </div> -->
             </div>
-            </div>
-            <a id="logged-user" href="#" class="win-command pull-right">
-               <span class="win-commandicon win-commandring icon-cog-3"></span>
+            <a href="#page-settings" class="win-command pull-right">
+               <span class="cmd-link win-commandicon win-commandring icon-cog-3"></span>
+               <!-- <span class="win-label">Settings</span> -->
             </a>
-            <div id="top-info" class="pull-right">
-            <a id="settings" href="#" class="win-command pull-right">
-               <span class="win-commandicon win-commandring icon-home-3"></span>
+            <a href="#page-timers" class="win-command pull-right">
+               <span class="cmd-link win-commandicon win-commandring icon-clock-2"></span>
+               <!-- <span class="win-label">Settings</span> -->
+            </a>
+            <a href="#page-lighting" class="win-command pull-right">
+               <span class="cmd-link win-commandicon win-commandring icon-light-bulb"></span>
+               <!-- <span class="win-label">Lights</span> -->
+            </a>
+            <a href="#page-home" class="win-command pull-right">
+               <span class="cmd-link win-commandicon win-commandring icon-home-3"></span>
+               <!-- <span class="win-label">Home</span> -->
             </a>
             <!-- <div class="pull-left">
                <h3>FirstName</h3>
@@ -112,8 +121,23 @@
       </div>
       </div>
    </header>
+
+   <div id="page-home" class="container page">
+     <div class="row">
+       <div class="span12">
+         <h1 id="time" class="text-center"></h1>
+       </div>
+       <div class="row weather">
+        <div class="span12">
+          <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" 
+            src="http://forecast.io/embed/#lat=-33.959439&lon=151.038301&name=2 Burradoo St&units=uk"> </iframe>
+        </div>
+      </div>
+     </div>
+
+   </div>
    
-   <div class="container">
+   <div id="page-lighting" class="container page hide">
       <div class="row">
          <div class="span12">
             <div class="tabbable"> <!-- Only required for left/right tabs -->
@@ -189,7 +213,48 @@
             </div>
          </div>
       </div>
+      <!-- <div class="row weather">
+        <div class="span12">
+          <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" 
+            src="http://forecast.io/embed/#lat=-33.959439&lon=151.038301&name=2 Burradoo St&units=uk"> </iframe>
+        </div>
+      </div> -->
    </div>
+
+   <div id="page-timers" class="container page hide">
+     <div class="row">
+       <div class="span12">
+          <p>Set individual timers for each output pin. Times should be in 24H format (HH:MM).</p>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Pin</th>
+                <th>Enabled</th>
+                <th>Time On</th>
+                <th>Time Off</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="autoTimes">
+
+            </tbody>
+          </table>
+       </div>
+     </div>
+   </div>
+
+   <div id="page-settings"></div>
+
+
+   <div id="alerts-container"></div>
+
+   <div id="toast-example1" class="toast toasttext02 fade hide">
+       <button type="button" class="close" data-dismiss="alert"></button>
+       <div class="toast-body">
+          <h4 class="toast-heading">Timer set successfully</h4>
+       </div>
+    </div>
+
 
    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
    <script src="//code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -215,6 +280,9 @@
 
    <script type="text/javascript" src="js/vendor/jquery.imagemapster.js"></script>
    <script type="text/javascript" src="js/automate.js"></script>
+   <script type="text/javascript" src="js/showtime.js"></script>
+   <script type="text/javascript" src="js/bootmetro_nav.js"></script>
+   <script type="text/javascript" src="js/autoTimes.js"></script>
 
 
    <script type="text/javascript">

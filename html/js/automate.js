@@ -166,7 +166,7 @@ function updateLights(gpio, switched) {
 // Refresh GPIO pins, reloading data from webiopi through REST API
 function refreshGpio() {
     url = "*";
-    $.get(url, function(data) {
+    $.getJSON(url, function(data) {
         pins = data.GPIO;
         for (var i = 0; i < GPIO_used.length; i++) {
             var gpio = GPIO_used[i];
